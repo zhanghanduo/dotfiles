@@ -12,7 +12,7 @@ print_in_purple "\n   Build Essentials\n\n"
 install_package "Build Essential" "build-essential"
 
 # GnuPG archive keys of the Debian archive.
-install_package "GnuPG archive keys" "debian-archive-keyring"
+# install_package "GnuPG archive keys" "debian-archive-keyring"
 
 # Software which is not included by default
 # in Ubuntu due to legal or copyright reasons.
