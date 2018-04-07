@@ -33,13 +33,13 @@ create_gitconfig_local() {
     # Sign commits using GPG.
     # https://help.github.com/articles/signing-commits-using-gpg/
 
-    # gpgsign = true
+    # gpgsign = false
 
 
 [user]
 
-    name =
-    email =
+    name = ugv
+    email = hzhang032@e.ntu.edu.sg
     # signingkey =" \
         >> "$FILE_PATH"
     fi
@@ -70,7 +70,7 @@ main() {
 
     create_bash_local
     create_gitconfig_local
-    create_vimrc_local
+    # create_vimrc_local
 
 }
 

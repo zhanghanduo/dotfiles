@@ -187,12 +187,12 @@ The `~/.vimrc.local` file it will be automatically sourced after
 settings from `~/.vimrc`.
 
 
-### Forks
+### Zsh
 
-If you decide to fork this project, don't forget to substitute my
-username with your own in the [`setup` snippets](#setup) and [in the
-`setup` script](https://github.com/alrra/dotfiles/blob/1503cf23ef23f6e31342b140bcd246625160b94f/src/os/setup.sh#L3).
-
+`sudo apt-get install zsh`
+`wget --no-check-certificate https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | sh`
+# sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
+`chsh -s 'which zsh' `
 
 ## Update
 
