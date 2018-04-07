@@ -9,6 +9,7 @@ create_directories() {
 
     declare -a DIRECTORIES=(
         "$HOME/Downloads/torrents"
+        "$HOME/projects"
         "$HOME/catkin_ws/src"
         "$HOME/catkin_spt/src"
         "$HOME/softwares"
