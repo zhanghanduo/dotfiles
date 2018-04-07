@@ -14,7 +14,11 @@ install_package "Cmake" "cmake"
 
 install_package "Python pip" "python-pip"
 
-## Install general toolchains
+## Time sync tools
+install_package "Chrony" "chrony"
+install_package "Ntpdate" "ntpdate"
+
+## Compiling toolchains
 
 sudo apt-get install libprotobuf-dev libleveldb-dev libsnappy-dev libopencv-dev libhdf5-serial-dev protobuf-compiler
 
