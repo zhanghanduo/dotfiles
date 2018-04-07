@@ -58,6 +58,19 @@ open_github_ssh_page() {
         print_warning "Please add the public SSH key to GitHub ($GITHUB_SSH_URL)"
     fi
 
+    declare -r GITLAB_SSH_URL="https://gitlab.com/profile/keys"
+
+    # The order of the following checks matters
+    # as on Ubuntu there is also a utility called `open`.
+
+    if cmd_exists "xdg-open"; then
+        xdg-open "$GITLAB_SSH_URL"
+    elif cmd_exists "open"; then
+        open "$GITLAB_SSH_URL"
+    else
+        print_warning "Please add the public SSH key to Gitlab ($GITLAB_SSH_URL)"
+    fi
+
 }
 
 set_github_ssh_key() {

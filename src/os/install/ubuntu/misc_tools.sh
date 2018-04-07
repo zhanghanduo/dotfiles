@@ -14,6 +14,17 @@ install_package "Cmake" "cmake"
 
 install_package "Python pip" "python-pip"
 
+## Install general toolchains
+
+sudo apt-get install libprotobuf-dev libleveldb-dev libsnappy-dev libopencv-dev libhdf5-serial-dev protobuf-compiler
+
+sudo apt-get install --no-install-recommends libboost-all-dev
+
+sudo apt-get install libgflags-dev libgoogle-glog-dev liblmdb-dev
+
+# BLAS & LAPACK
+sudo apt-get install libatlas-base-dev
+
 ## Install g2o
 install_package "Suite Sparse" "libsuitesparse-dev"
 
@@ -23,8 +34,13 @@ git clone git@github.com:RainerKuemmerle/g2o.git
 
 cd g2o/ && mkdir build && cmake .. && make -j8 && sudo make install
 
-cd ~
+## Install Ceres Solver
+cd ~/softwares
 
+git clone --quiet git@github.com:ceres-solver/ceres-solver.git
+
+cd ceres-solver && mkdir build && cmake .. && make -j8 && sudo make install
+cd ~
 ## ZSH envrionment
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
