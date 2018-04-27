@@ -38,12 +38,14 @@ The setup process will:
   [`Ubuntu`](src/os/preferences/ubuntu) preferences
 * Install [`vim` plugins](src/vim/vim/plugins) (Optional)
 
-## Customize
+## Manual Setup for UGV Project
 1. open `src/os/create_local_config_files.sh`, enter the github/gitlab name and email.
 
 2. Run `src/os/setup.sh`
 
-3. After reboot, Enter `after_reboot`. In order, install `cuda.zsh`, `ros.zsh` and `opencv.zsh`
+3. After reboot, Enter `after_reboot/`. In order, install `1_cuda.zsh`, `2_ros.zsh` and `3_opencv.zsh`
+
+4. Enter `4_projects.zsh`, follow the steps.
 
 
 ## Screenshots
