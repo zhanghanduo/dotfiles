@@ -1,5 +1,7 @@
 #!/bin/zsh
 
+## 1. Install Opencv with opencv_contrib and compile with CUDA
+
 cd ~/softwares/
 
 git clone https://github.com/opencv/opencv.git
@@ -30,9 +32,31 @@ printf '# OpenCV\nPKGCONFIGPATH=$PKGCONFIGPATH:/usr/local/lib/pkgconfig\nexport 
 
 source ~/.zhrc 
 
+## 2. Install ROS Opencv Bridge
+
 cd ~/catkin_ws/src/
 
 git clone https://github.com/ros-perception/vision_opencv.git
 
 ck
+
+## 3. Install Other computer vision tools
+
+cd ~/softwares/
+
+### DLib
+
+git clone git@github.com:dorian3d/DLib.git
+cd DLib && mkdir build && cd build && cmake .. & make -j8 & sudo make install
+
+### DLoopDetector
+
+git clone git@github.com:dorian3d/DLoopDetector.git
+cd DLoopDetector && mkdir build && cd build && cmake .. & make -j8 & sudo make install
+
+### OpenGV (Optional)
+
+git clone git@github.com:laurentkneip/opengv.git
+cd opengv && mkdir build && cd build && cmake .. & make -j8 & sudo make install
+
 

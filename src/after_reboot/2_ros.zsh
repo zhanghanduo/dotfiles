@@ -49,6 +49,10 @@ install_package "ROS eigen-conversions" "ros-kinetic-eigen-conversions"
 
 install_package "ROS rviz visual tools" "ros-kinetic-rviz-visual-tools"
 
+cd ~/catkin_spt/src/
+
+git clone git@github.com:lrse/ros-utils.git
+
 ## (Optional) Hector tools for map and path visualization
 # install_package "ROS hector family" "ros-kinetic-hector-*"
 
