@@ -22,7 +22,7 @@ create_symlinks() {
         # "shell/inputrc"
 
         "git/gitattributes"
-        "git/gitconfig"
+        # "git/gitconfig"   # This is some useful aliases and colorful dispaly settings for Git. If you don't use zsh, just uncomment it.
         # "git/gitignore"
 
         "tmux/tmux.conf"

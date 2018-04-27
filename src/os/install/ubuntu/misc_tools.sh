@@ -16,69 +16,48 @@ install_package "Python pip" "python-pip"
 
 ## Time sync tools
 install_package "Chrony" "chrony"
+
 install_package "Ntpdate" "ntpdate"
 
 ## Compiling toolchains
 
-sudo apt-get install libprotobuf-dev libleveldb-dev libsnappy-dev libopencv-dev libhdf5-serial-dev protobuf-compiler
+sudo apt-get install --allow-unauthenticated -qqy libprotobuf-dev libleveldb-dev libsnappy-dev libhdf5-serial-dev protobuf-compiler
 
-sudo apt-get install --no-install-recommends libboost-all-dev
+install_package "Boost" "libboost-all-dev" "--no-install-recommends"
 
-sudo apt-get install libgflags-dev libgoogle-glog-dev liblmdb-dev
+install_package "Gflags" "libgflags-dev"
 
-# BLAS & LAPACK
-sudo apt-get install libatlas-base-dev
+install_package "Glog" "libgoogle-glog-dev"
 
-## Install g2o
+install_package "LMDB" "liblmdb-dev"
+
+# BLAS & LAPACK (Numeric Calculation)
+install_package "BLAS" "libatlas-base-dev"
+
+install_package "LAPACK" "liblapack-dev"
+
 install_package "Suite Sparse" "libsuitesparse-dev"
 
-cd ~/projects
-
-git clone git@github.com:RainerKuemmerle/g2o.git
-
-cd g2o/ && mkdir build && cmake .. && make -j8 && sudo make install
+## Install Eigen
+install_package "Eigen3" "libeigen3-dev"
 
 ## Install Ceres Solver
 cd ~/softwares
 
 git clone --quiet git@github.com:ceres-solver/ceres-solver.git
 
-cd ceres-solver && mkdir build && cmake .. && make -j8 && sudo make install
+cd ceres-solver && mkdir build && cd build && cmake .. && make -j8 && sudo make install
+
+# Install G2O
+cd ~/softwares
+
+git clone git@github.com:RainerKuemmerle/g2o.git
+
+cd g2o/ && mkdir build && cd build && cmake .. && make -j8 && sudo make install
+
 cd ~
-## ZSH envrionment
-# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-install_package "Zsh" "zsh"
-wget --no-check-certificate https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | sh
-# sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
-chsh -s `which zsh`
+# Install Dropdown Terminal Guake
+install_package "Guake3" "guake"
 
-install_package "Zsh-syntax-highlighting" "zsh-syntax-highlighting"
-
-install_package "Autojump" "autojump"
-
-git clone --quiet https://github.com/zsh-users/zsh-syntax-highlighting.git
-echo "source ${(q-)PWD}/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> ${ZDOTDIR:-$HOME}/.zshrc
-
-# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-# install_package "ShellCheck" "shellcheck"
-# install_package "xclip" "xclip"
-
-# if [ -d "$HOME/.nvm" ]; then
-
-#     if ! package_is_installed "yarn"; then
-
-#         add_key "https://dl.yarnpkg.com/debian/pubkey.gpg" \
-#             || print_error "Yarn (add key)"
-
-#         add_to_source_list "https://dl.yarnpkg.com/debian/ stable main" "yarn.list" \
-#             || print_error "Yarn (add to package resource list)"
-
-#         update &> /dev/null \
-#             || print_error "Yarn (resync package index files)"
-
-#     fi
-
-#     install_package "Yarn" "yarn" "--no-install-recommends"
-# fi
+sudo ln -s `which zsh` /etc/xdg/autostart/
