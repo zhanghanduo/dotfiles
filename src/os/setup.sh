@@ -258,7 +258,7 @@ main() {
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-    ./preferences/main.sh
+    #./preferences/main.sh
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -266,19 +266,19 @@ main() {
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-    if cmd_exists "git"; then
+  #  if cmd_exists "git"; then
 
-        if [ "$(git config --get remote.origin.url)" != "$DOTFILES_ORIGIN" ]; then
-            ./initialize_git_repository.sh "$DOTFILES_ORIGIN"
-        fi
+   #     if [ "$(git config --get remote.origin.url)" != "$DOTFILES_ORIGIN" ]; then
+   #         ./initialize_git_repository.sh "$DOTFILES_ORIGIN"
+   #     fi
 
         # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-        if ! $skipQuestions; then
+    #    if ! $skipQuestions; then
             ./update_content.sh
-        fi
+    #    fi
 
-    fi
+   # fi
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 

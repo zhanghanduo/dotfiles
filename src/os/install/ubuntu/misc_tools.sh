@@ -14,6 +14,9 @@ install_package "Cmake" "cmake"
 
 install_package "Python pip" "python-pip"
 
+## Install python tools
+
+
 ## Time sync tools
 install_package "Chrony" "chrony"
 
@@ -21,7 +24,7 @@ install_package "Ntpdate" "ntpdate"
 
 ## Compiling toolchains
 
-sudo apt-get install --allow-unauthenticated -qqy libprotobuf-dev libleveldb-dev libsnappy-dev libhdf5-serial-dev protobuf-compiler
+#sudo apt-get install --allow-unauthenticated -qqy libprotobuf-dev libleveldb-dev libsnappy-dev libhdf5-serial-dev protobuf-compiler
 
 install_package "Boost" "libboost-all-dev" "--no-install-recommends"
 
@@ -44,14 +47,14 @@ install_package "Eigen3" "libeigen3-dev"
 ## Install Ceres Solver
 cd ~/softwares
 
-git clone --quiet git@github.com:ceres-solver/ceres-solver.git
+git clone --quiet https://github.com/RainerKuemmerle/g2o.git
 
 cd ceres-solver && mkdir build && cd build && cmake .. && make -j8 && sudo make install
 
 # Install G2O
 cd ~/softwares
 
-git clone git@github.com:RainerKuemmerle/g2o.git
+git clone --quiet https://github.com/RainerKuemmerle/g2o.git
 
 cd g2o/ && mkdir build && cd build && cmake .. && make -j8 && sudo make install
 

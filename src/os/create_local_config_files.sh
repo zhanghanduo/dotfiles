@@ -38,8 +38,8 @@ create_gitconfig_local() {
 
 [user]
 
-    name = ugv
-    email = hzhang032@e.ntu.edu.sg
+    name = handuo
+    email = zhanghanduo@live.cn
     # signingkey =" \
         >> "$FILE_PATH"
     fi
@@ -67,6 +67,12 @@ create_vimrc_local() {
 main() {
 
     print_in_purple "\n • Create local config files\n\n"
+
+    cd ~/.ssh && ssh-keygen
+
+    git config --global user.name "handuo"
+    
+    git config --global user.email zhanghanduo@live.cn
 
     create_bash_local
     create_gitconfig_local

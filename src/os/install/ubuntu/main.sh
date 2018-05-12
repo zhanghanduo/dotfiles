@@ -20,9 +20,11 @@ upgrade
 #./../vim.sh
 ./misc_tools.sh
 
-./nvidia.sh
+#./nvidia.sh
+
+./zsh.sh
 
 ./cleanup.sh
 
-./zsh.sh
+
 
