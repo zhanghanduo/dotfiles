@@ -15,12 +15,12 @@ install_package "Zsh" "zsh"
 # wget --no-check-certificate https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | sh
 sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
 
-install_package "Zsh-syntax-highlighting" "zsh-syntax-highlighting"
+git clone --quiet https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 
-install_package "Autojump" "autojump"
-
-git clone --quiet https://github.com/zsh-users/zsh-syntax-highlighting.git
-echo "source ${(q-)PWD}/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> ${ZDOTDIR:-$HOME}/.zshrc
+git clone --quiet https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 
 chsh -s `which zsh`
+
+
+# Don't forget to add plugins=( [plugins...] zsh-syntax-highlighting zsh-autosuggestions autojump) to your zshrc later!
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -

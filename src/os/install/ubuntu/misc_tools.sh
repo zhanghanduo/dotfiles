@@ -47,7 +47,7 @@ install_package "Eigen3" "libeigen3-dev"
 ## Install Ceres Solver
 cd ~/softwares
 
-git clone --quiet https://github.com/RainerKuemmerle/g2o.git
+git clone --quiet https://github.com/ceres-solver/ceres-solver.git
 
 cd ceres-solver && mkdir build && cd build && cmake .. && make -j8 && sudo make install
 
