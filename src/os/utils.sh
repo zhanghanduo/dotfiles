@@ -146,8 +146,8 @@ get_os_version() {
 
     if [ "$os" == "macos" ]; then
         version="$(sw_vers -productVersion)"
-    elif [ "$os" == "ubuntu" ]; then
-        version="$(lsb_release -d | cut -f2 | cut -d' ' -f2)"
+ elif [ -e "/etc/os-release" ]; then
+        version="$(. /etc/os-release; printf "%s" "$VERSION_ID")"
     fi
 
     printf "%s" "$version"
