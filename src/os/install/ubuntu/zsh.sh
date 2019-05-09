@@ -19,8 +19,17 @@ git clone --quiet https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH
 
 git clone --quiet https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 
+sudo apt install fonts-powerline
+
+git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt"
+
+ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
+
+# ZSH_THEME="spaceship" in your .zshrc
+
 chsh -s `which zsh`
 
+#Optional fasd (or natural j) and sudo
 
 # Don't forget to add plugins=( [plugins...] zsh-syntax-highlighting zsh-autosuggestions autojump) to your zshrc later!
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
