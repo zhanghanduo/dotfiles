@@ -1,4 +1,4 @@
-[Cătălin][repo]’s dotfiles
+[Handuo][https://zhanghanduo.com]’s dotfiles
 ==========================
 
 [![Build Status][ci badge]][ci link]
@@ -10,18 +10,20 @@ described in the [`Local Settings`](#local-settings) section.
 Table of Contents
 -----------------
 
-* [🔧 Setup](#setup)
-* [💄 Customize](#customize)
-  * [🔀 Forks](#forks)
-  * [🌐 Local Settings](#local-settings)
-    * [🐚 `~/.bash.local`](#bashlocal)
-    * [🔁 `~/.gitconfig.local`](#gitconfiglocal)
-    * [⌨️  `~/.vimrc.local`](#vimrclocal)
-* [↕️  Update](#update)
-* [📸 Screenshots](#screenshots)
-  * [🔁 `Git`](#git)
-  * [⌨️  `tmux` & `Vim`](#tmux--vim)
-* [📄 License](#license)
+- [Handuo’s dotfiles](#handuos-dotfiles)
+  - [Table of Contents](#table-of-contents)
+  - [Setup](#setup)
+  - [Customize](#customize)
+    - [Local Settings](#local-settings)
+      - [~/.bash.local](#bashlocal)
+      - [~/.gitconfig.local](#gitconfiglocal)
+      - [~/.vimrc.local](#vimrclocal)
+    - [Forks](#forks)
+  - [Update](#update)
+  - [Screenshots](#screenshots)
+    - [Git](#git)
+    - [tmux &amp; Vim](#tmux-amp-vim)
+  - [License](#license)
 
 Setup
 -----
@@ -33,29 +35,46 @@ To set up the `dotfiles` run the appropriate snippet in the terminal:
 
 | OS | Snippet |
 |:---|:---|
-| `macOS` | `bash -c "$(curl -LsS https://raw.github.com/alrra/dotfiles/master/src/os/setup.sh)"` |
-| `Ubuntu` | `bash -c "$(wget -qO - https://raw.github.com/alrra/dotfiles/master/src/os/setup.sh)"` |
+| `macOS` | `bash -c "$(curl -LsS https://raw.github.com/zhanghanduo/dotfiles/devel/src/os/setup.sh)"` |
+| `Ubuntu` | `bash -c "$(wget -qO - https://raw.github.com/zhanghanduo/dotfiles/devel/src/os/setup.sh)"` |
 
 That's it! ✨
 
 The setup process will:
 
-* Download the dotfiles on your computer
-  (by default it will suggest `~/projects/dotfiles`).
-* Create some additional [directories][dirs].
-* [Symlink][symlink] the [`git`][git], [`shell`][shell],
-  and [`vim`][vim] files.
+* Download the dotfiles on your computer (by default it will
+  suggest `~/projects/dotfiles`)
+* Create some additional [directories][directories]
+* [Symlink][symlink] the
+  [`git`](src/git),
+  [`shell`](src/shell), and
+  [`vim`](src/vim) files
 * Install applications / command-line tools for
-  [`macOS`][install macos] / [`Ubuntu`][install ubuntu].
-* Set custom [`macOS`][preferences macos] /
-  [`Ubuntu`][preferences ubuntu] preferences.
-* Install [`vim` plugins][vim plugins].
+  [`macOS`](src/os/install/macos) /
+  [`Ubuntu`](src/os/install/ubuntu)
+* Set custom
+  [`macOS`](src/os/preferences/macos) /
+  [`Ubuntu`](src/os/preferences/ubuntu) preferences
+* Install [`vim` plugins](src/vim/vim/plugins)
 
 Setup process in action:
 
-| ![Setup process on macOS][setup macos] | ![Setup process on Ubuntu][setup ubuntu] |
-|:---:|:---:|
-| `macOS` | `Ubuntu` |
+<table>
+    <tbody>
+        <tr>
+            <td>
+                <img src="https://cloud.githubusercontent.com/assets/1223565/19314446/cd89a592-90a2-11e6-948d-9d75247088ba.gif" alt="Setup process on Ubuntu" width="100%">
+            </td>
+            <td>
+                <img src="https://cloud.githubusercontent.com/assets/1223565/19048636/e23e347a-89af-11e6-853c-98616b75b6ae.gif" alt="Setup process on Ubuntu" width="100%">
+            </td>
+        </tr>
+        <tr align="center">
+            <td>macOS</td>
+            <td>Ubuntu</td>
+        </td>
+    </tbody>
+</table>
 
 Customize
 ---------
