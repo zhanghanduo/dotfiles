@@ -141,12 +141,6 @@ The `~/.vimrc.local` file will be automatically sourced after
 `~/.vimrc`, thus, allowing its content to add or overwrite the
 settings from `~/.vimrc`.
 
-### Forks
-
-If you decide to [fork] this project, do not forget to substitute
-my username with your own in the [`setup` snippets](#setup) and
-[in the `setup` script][setup script].
-
 Update
 ------
 
@@ -184,8 +178,8 @@ The code is available under the [MIT license][license].
 
 <!-- Link labels: -->
 
-[ci badge]: https://github.com/alrra/dotfiles/workflows/test/badge.svg
-[ci link]: https://github.com/alrra/dotfiles/actions
+[ci badge]: https://github.com/zhanghanduo/dotfiles/workflows/test/badge.svg
+[ci link]: https://github.com/zhanghanduo/dotfiles/actions
 [dirs]: src/os/create_directories.sh
 [fork]: https://help.github.com/en/github/getting-started-with-github/fork-a-repo
 [git log macos]: https://cloud.githubusercontent.com/assets/1223565/10560966/e4ec08a6-7523-11e5-8941-4e12f6550a63.png
@@ -198,9 +192,8 @@ The code is available under the [MIT license][license].
 [license]: LICENSE.txt
 [preferences macos]: src/os/preferences/macos
 [preferences ubuntu]: src/os/preferences/ubuntu
-[repo]: https://github.com/alrra
+[repo]: https://github.com/zhanghanduo
 [setup macos]: https://cloud.githubusercontent.com/assets/1223565/19314446/cd89a592-90a2-11e6-948d-9d75247088ba.gif
-[setup script]: https://github.com/alrra/dotfiles/blob/2f53485df6be75d207d4c5c03c265730b416555a/src/os/setup.sh#L3
 [setup ubuntu]: https://cloud.githubusercontent.com/assets/1223565/19048636/e23e347a-89af-11e6-853c-98616b75b6ae.gif
 [setup]: src/os/setup.sh
 [shell]: src/shell
