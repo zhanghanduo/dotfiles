@@ -12,7 +12,7 @@ print_in_purple "\n   Miscellaneous\n\n"
 install_package "VLC" "vlc"
 
 install_package "Zsh" "zsh"
-chsh -s $(which zsh)
+execute "chsh -s $(which zsh)"
 
 # GUI
 
