@@ -1,9 +1,7 @@
 [Handuo](https://zhanghanduo.com) 's dotfiles
 ==========================
 
-[![Build Status][ci badge1]][ci link1] 
-
-[!Build Status][ci badge2]][ci link2]
+[![Build Status][ci badge1]][ci link1]  [![Build Status][ci badge2]][ci link2]
 
 These are the base dotfiles that I start with when I set up a new
 environment. For more specific local needs I use the `*.local` files
