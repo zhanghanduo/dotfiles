@@ -1,4 +1,4 @@
-[Handuo][https://zhanghanduo.com]’s dotfiles
+[Handuo](https://zhanghanduo.com) 's dotfiles
 ==========================
 
 [![Build Status][ci badge]][ci link]
