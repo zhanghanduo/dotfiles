@@ -1,10 +1,10 @@
 #!/bin/bash
 
-declare -r GITHUB_REPOSITORY="alrra/dotfiles"
+declare -r GITHUB_REPOSITORY="zhanghanduo/dotfiles"
 
 declare -r DOTFILES_ORIGIN="git@github.com:$GITHUB_REPOSITORY.git"
-declare -r DOTFILES_TARBALL_URL="https://github.com/$GITHUB_REPOSITORY/tarball/master"
-declare -r DOTFILES_UTILS_URL="https://raw.githubusercontent.com/$GITHUB_REPOSITORY/master/src/os/utils.sh"
+declare -r DOTFILES_TARBALL_URL="https://github.com/$GITHUB_REPOSITORY/tarball/devel"
+declare -r DOTFILES_UTILS_URL="https://raw.githubusercontent.com/$GITHUB_REPOSITORY/devel/src/os/utils.sh"
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -149,7 +149,7 @@ extract() {
 verify_os() {
 
     declare -r MINIMUM_MACOS_VERSION="10.10"
-    declare -r MINIMUM_UBUNTU_VERSION="18.04"
+    declare -r MINIMUM_UBUNTU_VERSION="16.04"
 
     local os_name="$(get_os)"
     local os_version="$(get_os_version)"
@@ -244,7 +244,7 @@ main() {
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-    ./create_symbolic_links.sh "$@"
+    # ./create_symbolic_links.sh "$@"
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 

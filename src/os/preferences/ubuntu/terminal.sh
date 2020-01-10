@@ -7,6 +7,8 @@ cd "$(dirname "${BASH_SOURCE[0]}")" \
 
 print_in_purple "\n   Terminal\n\n"
 
+execute "guake --restore-preferences ../../../configs/myguakeprefs"
+
 execute "gsettings set org.gnome.desktop.interface monospace-font-name 'Monospace 12'" \
     "Change font size"
 

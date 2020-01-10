@@ -11,21 +11,53 @@ print_in_purple "\n   Miscellaneous Tools\n\n"
 install_package "cURL" "curl"
 install_package "ShellCheck" "shellcheck"
 install_package "xclip" "xclip"
+install_package "ag" "silversearcher-ag"
+install_package "Python pip" "python-pip"
+install_package "Python3 pip" "python3-pip"
 
-if [ -d "$HOME/.nvm" ]; then
+# Compiling toolchains
+install_package "Boost" "libboost-all-dev" "--no-install-recommends"
 
-    if ! package_is_installed "yarn"; then
+install_package "protobuf" "libprotobuf-dev"
 
-        add_key "https://dl.yarnpkg.com/debian/pubkey.gpg" \
-            || print_error "Yarn (add key)"
+install_package "Gflags" "libgflags-dev"
 
-        add_to_source_list "https://dl.yarnpkg.com/debian/ stable main" "yarn.list" \
-            || print_error "Yarn (add to package resource list)"
+install_package "Glog" "libgoogle-glog-dev"
 
-        update &> /dev/null \
-            || print_error "Yarn (resync package index files)"
+# install_package "LMDB" "liblmdb-dev"
 
-    fi
+# BLAS & LAPACK (Numeric Calculation)
 
-    install_package "Yarn" "yarn" "--no-install-recommends"
-fi
+install_package "BLAS" "libatlas-base-dev"
+
+install_package "LAPACK" "liblapack-dev"
+
+install_package "Suite Sparse" "libsuitesparse-dev"
+
+## Install Eigen
+install_package "Eigen3" "libeigen3-dev"
+
+# Guake Terminal
+install_package "Guake" "guake"
+
+
+
+
+# node js packages
+# if [ -d "$HOME/.nvm" ]; then
+#
+#     if ! package_is_installed "yarn"; then
+#
+#         add_key "https://dl.yarnpkg.com/debian/pubkey.gpg" \
+#             || print_error "Yarn (add key)"
+#
+#         add_to_source_list "https://dl.yarnpkg.com/debian/ stable main" "yarn.list" \
+#             || print_error "Yarn (add to package resource list)"
+#
+#         update &> /dev/null \
+#             || print_error "Yarn (resync package index files)"
+#
+#     fi
+#
+#     install_package "Yarn" "yarn" "--no-install-recommends"
+# fi

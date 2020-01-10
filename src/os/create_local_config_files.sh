@@ -7,12 +7,12 @@ cd "$(dirname "${BASH_SOURCE[0]}")" \
 
 create_bash_local() {
 
-    declare -r FILE_PATH="$HOME/.bash.local"
+    declare -r FILE_PATH="$HOME/.zsh.local"
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
     if [ ! -e "$FILE_PATH" ] || [ -z "$FILE_PATH" ]; then
-        printf "%s\n\n" "#!/bin/bash" >> "$FILE_PATH"
+        printf "%s\n\n" "#!/bin/zsh" >> "$FILE_PATH"
     fi
 
     print_result $? "$FILE_PATH"
@@ -48,19 +48,19 @@ create_gitconfig_local() {
 
 }
 
-create_vimrc_local() {
-
-    declare -r FILE_PATH="$HOME/.vimrc.local"
-
-    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-    if [ ! -e "$FILE_PATH" ]; then
-        printf "" >> "$FILE_PATH"
-    fi
-
-    print_result $? "$FILE_PATH"
-
-}
+# create_vimrc_local() {
+#
+#     declare -r FILE_PATH="$HOME/.vimrc.local"
+#
+#     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+#
+#     if [ ! -e "$FILE_PATH" ]; then
+#         printf "" >> "$FILE_PATH"
+#     fi
+#
+#     print_result $? "$FILE_PATH"
+#
+# }
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -70,7 +70,7 @@ main() {
 
     create_bash_local
     create_gitconfig_local
-    create_vimrc_local
+    # create_vimrc_local
 
 }
 

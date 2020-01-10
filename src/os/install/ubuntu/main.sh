@@ -11,15 +11,21 @@ upgrade
 
 ./build-essentials.sh
 
+# Install Nvidia Driver (Optional)
+./nvidia.sh
+
+# Install git
 ./git.sh
-./../nvm.sh
-./browsers.sh
+
+# Install nodejs
+# ./../nvm.sh
+# ./browsers.sh
 ./compression_tools.sh
 ./image_tools.sh
 ./misc.sh
 ./misc_tools.sh
-./../npm.sh
-./tmux.sh
+# ./../npm.sh
+# ./tmux.sh
 ./../vim.sh
 
 ./cleanup.sh
