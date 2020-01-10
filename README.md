@@ -1,7 +1,7 @@
 [Handuo](https://zhanghanduo.com) 's dotfiles
 ==========================
 
-[![Build Status][ci badge1]][ci link1]  [![Build Status][ci badge2]][ci link2]
+[![Build Status][ci badge1]][ci link]  [![Build Status][ci badge2]][ci link]
 
 These are the base dotfiles that I start with when I set up a new
 environment. For more specific local needs I use the `*.local` files
@@ -180,8 +180,9 @@ The code is available under the [MIT license][license].
 
 [ci badge1]: https://github.com/zhanghanduo/dotfiles/workflows/Ubuntu/badge.svg?branch=devel
 [ci badge2]: https://github.com/zhanghanduo/dotfiles/workflows/macOS/badge.svg?branch=devel
-[ci link1]: https://github.com/zhanghanduo/dotfiles/actions?query=workflow%3AUbuntu
-[ci link2]: https://github.com/zhanghanduo/dotfiles/actions?query=workflow%3AmacOS
+<!-- [ci link1]: https://github.com/zhanghanduo/dotfiles/actions?query=workflow%3AUbuntu -->
+<!-- [ci link2]: https://github.com/zhanghanduo/dotfiles/actions?query=workflow%3AmacOS -->
+[ci link]: https://github.com/zhanghanduo/dotfiles/actions
 [dirs]: src/os/create_directories.sh
 [fork]: https://help.github.com/en/github/getting-started-with-github/fork-a-repo
 [git log macos]: https://cloud.githubusercontent.com/assets/1223565/10560966/e4ec08a6-7523-11e5-8941-4e12f6550a63.png
