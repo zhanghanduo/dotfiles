@@ -23,3 +23,12 @@ install_package "glew" "libglew-dev"
 install_package "jpeg" "libjpeg8-dev"
 
 install_package "gtk" "libgtk2.0-dev"
+
+install_package "ranger" "ranger"
+
+# Cannot apt or pip install bat on ubuntu version older than 19.10.
+# install_package "bat" "bat"
+
+git clone --depth 1 --quiet https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install
+
