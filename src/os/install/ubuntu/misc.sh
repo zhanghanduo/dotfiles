@@ -26,6 +26,11 @@ install_package "gtk" "libgtk2.0-dev"
 
 install_package "ranger" "ranger"
 
+# Install package of ripgrep to replace native grep/ack
+# curl -LO "https://github.com/BurntSushi/ripgrep/releases/download/11.0.2/ripgrep_11.0.2_amd64.deb"
+
+# sudo dpkg -i "repgrep_11.0.2_amd64.deb"
+
 # Cannot apt or pip install bat on ubuntu version older than 19.10.
 # install_package "bat" "bat"
 
