@@ -40,7 +40,11 @@ install_package "Eigen3" "libeigen3-dev"
 # Guake Terminal
 install_package "Guake" "guake"
 
+# Asciinema
+install_package "ASCII record" "asciinema"
 
+# direnv
+install_package "direnv" "direnv"
 
 
 # node js packages
