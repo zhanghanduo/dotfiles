@@ -33,8 +33,9 @@ antigen apply
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+source ~/.config/.zsh-theme-forest-night
 
 source $HOME/.aliases
 source $HOME/.env
 
-[ -f ".zshrc.local"] && source ".zshrc.local"
+# [ -f ".zshrc.local"] && source ".zshrc.local"
