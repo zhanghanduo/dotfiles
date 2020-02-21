@@ -15,10 +15,8 @@ Table of Contents
   - [Setup](#setup)
   - [Customize](#customize)
     - [Local Settings](#local-settings)
-      - [~/.bash.local](#bashlocal)
+      - [~/.zsh.local](#zshloacl)
       - [~/.gitconfig.local](#gitconfiglocal)
-      - [~/.vimrc.local](#vimrclocal)
-    - [Forks](#forks)
   - [Update](#update)
   - [Screenshots](#screenshots)
     - [Git](#git)
@@ -48,14 +46,12 @@ The setup process will:
 * [Symlink][symlink] the
   [`git`](src/git),
   [`shell`](src/shell), and
-  [`vim`](src/vim) files
 * Install applications / command-line tools for
   [`macOS`](src/os/install/macos) /
   [`Ubuntu`](src/os/install/ubuntu)
 * Set custom
   [`macOS`](src/os/preferences/macos) /
   [`Ubuntu`](src/os/preferences/ubuntu) preferences
-* Install [`vim` plugins](src/vim/vim/plugins)
 
 Setup process in action:
 
@@ -84,16 +80,16 @@ Customize
 The `dotfiles` can be easily extended to suit additional local
 requirements by using the following files:
 
-#### `~/.bash.local`
+#### `~/.zsh.local`
 
-The `~/.bash.local` file will be automatically sourced after all
-the other [`bash` related files][shell], thus, allowing its content
+The `~/.zsh.local` file will be automatically sourced after all
+the other [`zsh` related files][shell], thus, allowing its content
 to add to or overwrite the existing aliases, settings, `PATH`, etc.
 
-Here is a very simple example of a `~/.bash.local` file:
+Here is a very simple example of a `~/.zsh.local` file:
 
 ```bash
-#!/bin/bash
+#!/bin/zsh
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -134,12 +130,6 @@ such as the `Git` user credentials, e.g.:
     email = account@example.com
     signingkey = XXXXXXXX
 ```
-
-#### `~/.vimrc.local`
-
-The `~/.vimrc.local` file will be automatically sourced after
-`~/.vimrc`, thus, allowing its content to add or overwrite the
-settings from `~/.vimrc`.
 
 Update
 ------
