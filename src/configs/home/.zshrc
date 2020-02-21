@@ -18,7 +18,8 @@ antigen bundle sudo
 antigen bundle z
 antigen bundle andrewferrier/fzf-z
 # Syntax highlighting bundle.
-antigen bundle zsh-users/zsh-syntax-highlighting
+# antigen bundle zsh-users/zsh-syntax-highlighting
+antigen bundle zdharma/fast-syntax-highlighting
 # antigen bundle MichaelAquilina/zsh-autoswitch-virtualenv
 antigen bundle supercrabtree/k
 antigen bundle copydir
@@ -33,7 +34,7 @@ antigen apply
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-source ~/.config/.zsh-theme-forest-night
+ # source ~/.config/.zsh-theme-forest-night
 
 source $HOME/.aliases
 source $HOME/.env
