@@ -21,3 +21,14 @@
     sudo dpkg -i fd_7.4.0_amd64.deb
 
 ```
+
+# 5. betterlockscreen for i3
+Check the [https://github.com/pavanjadhaw/betterlockscreen](betterlockscreen).
+
+# 6. Install zsh histdb
+Check the [http://github.strcpy.cn/larkery/zsh-histdb](zsh-histdb).
+
+# 7. Install SpaceVim
+```
+    curl -sLf https://spacevim.org/install.sh | bash
+```
