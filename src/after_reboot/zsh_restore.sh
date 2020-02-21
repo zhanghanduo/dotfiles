@@ -2,4 +2,7 @@
 
 echo "Restoring zshrc.... No conda setup in the zshrc."
 
-ln -s -f ./.zshrc ~/.zshrc
+# Install Antigen zsh plugin manager.
+curl -L git.io/antigen > antigen.zsh
+
+# ln -s -f ./.zshrc ~/.zshrc

@@ -13,7 +13,8 @@ bindsym $mod+n border normal
 
 # 2. Display (fonts and monitors)
 
-font pango: Source Code Pro SemiBold 11 
+# font pango: Source Code Pro SemiBold 11
+font pango: SauceCodePro Nerd Font SemiBold 11
 
 floating_modifier $mod
 
@@ -106,9 +107,8 @@ exec_always --no-startup-id "killall -q dunst; dunst -config ~/.config/i3/notif"
 
 # 5. Applications
 
-# bindsym $mod+Return exec alacritty
 bindsym $mod+Return exec gnome-terminal
-bindsym $mod+t exec rxvt-unicode
+bindsym $mod+t exec alacritty
 exec_always --no-startup-id guake
 for_window [instance="guake"] floating enable
 
@@ -158,6 +158,8 @@ bindsym $mod+shift+q split toggle
 
 # toggle fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
+# toggle fullscreen: across all monitors
+bindsym $mod+shift+f fullscreen toggle global
 
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+s layout stacking
@@ -219,13 +221,14 @@ for_window [title="Detection and Tracking"] move to workspace $ws6 floating enab
 for_window [title="Slope Map"] move to workspace $ws6 floating enable border normal
 for_window [title="Disparity"] move to workspace $ws6 floating enable border normal
 for_window [title="YOLO V3"] move to workspace $ws6 floating enable border normal
-
+for_window [title="^OpenCV"] move to workspace $ws6 floating enable border normal
+for_window [title="^opencv"] move to workspace $ws6 floating enable border normal
 
 
 assign [class="Spotify"] $ws7
 assign [class="Firefox"] $ws2 
-assign [class="Google-chrome"] $ws2 
-assign [class="Code"] $ws3 
+# assign [class="Google-chrome"] $ws2
+assign [class="Code"] $ws4 
 assign [class="rviz"] $ws6 
 
 # switch to workspace with urgent window automatically
@@ -240,7 +243,8 @@ bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
-bindsym $mod+l exec i3lock -c 000000
+# bindsym $mod+l exec i3lock -c 000000
+bindsym $mod+l exec betterlockscreen --off 15 -l dimblur
 
 # Set shut down, restart and locking features
 bindsym $mod+m mode "$mode_system"
@@ -376,7 +380,9 @@ for_window [class="^Steam$" title="^Screenshot Uploader$"] floating enable
 for_window [class="^Steam$" title="^Steam Guard - Computer Authorization Required$"] floating enable
 for_window [title="^Steam Keyboard$"] floating enable
 new_window none
-exec_always xrandr --output DVI-I-1 --off --output DVI-I-0 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output DP-1 --mode 1920x1080 --pos 1920x0 --rotate left --output DP-0 --off
+# exec_always xrandr --output DVI-I-1 --off --output DVI-I-0 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output DP-1 --mode 1920x1080 --pos 1920x0 --rotate left --output DP-0 --off
+exec_always xrandr --output DVI-I-1 --off --output DVI-I-0 --primary --mode 1920x1080 --pos 1080x400 --rotate normal --output DP-1 --mode 1920x1080 --pos 0x0 --rotate left --output DP-0 --off
+# exec_always xrandr --output DVI-I-1 --off --output DVI-I-0 --primary --auto --output DP-1 --rotate left --panning 1920x1080+1080+0 --left-of DVI-I-1 --output DP-0 --off
 
 exec --no-startup-id dropbox start
 exec --no-startup-id fcitx -d
