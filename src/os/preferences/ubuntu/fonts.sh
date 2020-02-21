@@ -7,5 +7,5 @@ cd "$(dirname "${BASH_SOURCE[0]}")" \
 
 print_in_purple "\n   Fonts\n\n"
 
-cp "../../../configs/.fonts/*" -r "$HOME/.local/share/fonts"
+cp "../../../configs/fonts/*" -r "$HOME/.local/share/fonts"
 # fc-cache -f -v

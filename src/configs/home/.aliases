@@ -1,0 +1,17 @@
+# Set personal aliases, overriding those provided by oh-my-zsh libs,
+# plugins, and themes. Aliases can be placed here, though oh-my-zsh
+# users are encouraged to define aliases within the ZSH_CUSTOM folder.
+# For a full list of active aliases, run `alias`.
+#
+# Example aliases
+# alias zshconfig="mate ~/.zshrc"
+# alias ohmyzsh="mate ~/.oh-my-zsh"
+alias lc="colorls -lA --sd"
+alias cl="sh ~/softwares/clion-2019.2.2/bin/clion.sh"
+alias pycharm="sh -i -c ~/softwares/pycharm-2019.2.2/bin/pycharm.sh"
+alias gpu="watch -n1 nvidia-smi"
+alias tgz='tar -zxvf'
+alias ra='ranger'
+alias cat='bat'
+
+

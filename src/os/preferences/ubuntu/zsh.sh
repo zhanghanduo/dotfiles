@@ -6,7 +6,8 @@ cd "$(dirname "${BASH_SOURCE[0]}")" \
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 # Install antigen to replace the ohmyzsh framework for simpler setting.
 curl -L git.io/antigen > antigen.zsh
-
+sudo chmod +x ../../../configs/bootstrap.sh
+sh ../../../configs/bootstrap.sh
 # Install zsh plugins
 # git clone "https://github.com/zsh-users/zsh-autosuggestions" "${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions"
 #
