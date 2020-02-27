@@ -32,9 +32,9 @@ antigen theme romkatv/powerlevel10k
 # Tell Antigen that you're done.
 antigen apply
 
+  # source ~/.config/.zsh-theme-forest-night
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
- # source ~/.config/.zsh-theme-forest-night
 
 source $HOME/.aliases
 source $HOME/.env

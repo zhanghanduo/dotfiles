@@ -13,5 +13,5 @@ alias gpu="watch -n1 nvidia-smi"
 alias tgz='tar -zxvf'
 alias ra='ranger'
 alias cat='bat'
-
+alias g='googler -n 8'
 

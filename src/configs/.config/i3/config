@@ -6,7 +6,7 @@ new_window pixel 1
 new_float normal
 
 hide_edge_borders none
- 
+
 bindsym $mod+u border none
 bindsym $mod+y border pixel 1
 bindsym $mod+n border normal
@@ -101,7 +101,7 @@ bindsym $mod+Shift+9 move container to workspace $ws8; workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws8; workspace $ws0
 
 
-# 4. Notification 
+# 4. Notification
 # Notif
 exec_always --no-startup-id "killall -q dunst; dunst -config ~/.config/i3/notif"
 
@@ -120,9 +120,9 @@ bindsym $mod+q kill
 bindsym --whole-window $mod+button2 kill
 
 # start program launcher
-bindsym Mod1+Tab exec --no-startup-id rofi -show window -width 60 -location 0 -sidebar-mode -opacity "82" -bw 0 -bc "$base01" -bg "$base01" -fg "$text-color" -hlbg "$base01" -hlfg "#9575cd" -font "System San Francisco Display 18" -theme gruvbox-dark-soft.rasi
+bindsym Mod1+Tab exec --no-startup-id rofi -show window -width 60 -location 0 -sidebar-mode -opacity "82" -bw 0 -bc "$base01" -bg "$base01" -fg "$text-color" -hlbg "$base01" -hlfg "#9575cd" -font "System San Francisco Display 18" -theme themes/gruvbox/gruvbox-dark-soft
 # bindsym $mod+d exec rofi -show run -lines 3 -eh 2 -width 100 -padding 100 -opacity "85" -bw 0 -bc "$base01" -bg "$base01" -fg "$text-color" -hlbg "$base01" -hlfg "#9575cd" -font "System San Francisco Display 18"
-bindsym $mod+d exec rofi -show run -lines 8 -padding 18 -width 60 -location 0 -sidebar-mode -columns 3 -opacity "82" -bw 0 -bc "$base01" -bg "$base01" -fg "$text-color" -hlbg "$base01" -hlfg "#9575cd" -font "System San Francisco Display 18" -theme gruvbox-dark-soft.rasi
+bindsym $mod+d exec --no-startup-id rofi -modi "run#drun" -show drun -lines 8 -padding 18 -width 60 -location 0 -sidebar-mode -columns 3 -opacity "82" -bw 0 -bc "$base01" -bg "$base01" -fg "$text-color" -hlbg "$base01" -hlfg "#9575cd" -show-icons -drun-icon-theme "Papirus" -font "System San Francisco Display 18" -theme themes/gruvbox/gruvbox-dark-soft
 
 # 6. Change focus
 # bindsym $mod+j focus left
@@ -226,10 +226,10 @@ for_window [title="^opencv"] move to workspace $ws6 floating enable border norma
 
 
 assign [class="Spotify"] $ws7
-assign [class="Firefox"] $ws2 
+assign [class="Firefox"] $ws2
 # assign [class="Google-chrome"] $ws2
-assign [class="Code"] $ws4 
-assign [class="rviz"] $ws6 
+assign [class="Code"] $ws4
+assign [class="rviz"] $ws6
 
 # switch to workspace with urgent window automatically
 for_window [urgent=latest] focus
@@ -388,7 +388,7 @@ exec --no-startup-id dropbox start
 exec --no-startup-id fcitx -d
 # Set up a "dummy" bar that polybar will render over (to prevent maximized windows from covering polybar)
 # bar {
-#  height 
+#  height
 #   mode dock
 #   position top
 #   i3bar_command i3bar -t
