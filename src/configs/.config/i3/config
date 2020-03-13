@@ -13,7 +13,7 @@ bindsym $mod+n border normal
 
 # 2. Display (fonts and monitors)
 
-# font pango: Source Code Pro SemiBold 11
+# font pango: Font Awesome 5 Free Solid 11
 font pango: SauceCodePro Nerd Font SemiBold 11
 
 floating_modifier $mod
@@ -135,8 +135,9 @@ bindsym --whole-window $mod+button2 kill
 bindsym Mod1+Tab exec --no-startup-id rofi -show window -width 60 -location 0 -sidebar-mode -opacity "82" -bw 0 -bc "$base01" -bg "$base01" -fg "$text-color" -hlbg "$base01" -hlfg "#9575cd" -font "SauceCodePro Nerd Font 17" -theme themes/gruvbox/gruvbox-dark-soft
 # bindsym $mod+d exec rofi -show run -lines 3 -eh 2 -width 100 -padding 100 -opacity "85" -bw 0 -bc "$base01" -bg "$base01" -fg "$text-color" -hlbg "$base01" -hlfg "#9575cd" -font "System San Francisco Display 18"
 bindsym $mod+d exec --no-startup-id rofi -modi "run#drun" -show run -lines 8 -padding 18 -width 60 -location 0 -sidebar-mode -columns 3 -opacity "82" -bw 0 -bc "$base01" -bg "$base01" -fg "$text-color" -hlbg "$base01" -hlfg "#9575cd" -show-icons -drun-icon-theme "Papirus" -font "System San Francisco Display 18" -theme themes/gruvbox/gruvbox-dark-soft
+bindsym $mod+i exec --no-startup-id fontawesome-menu -f '/home/handuo/projects/configs/rofi-fontawesome/fa5-icon-list.txt' -o '-i -columns 6 -width 100 -lines 20 -bw 2 -yoffset -2 -location 1  -theme themes/gruvbox/gruvbox-dark-soft'
 # bindsym $mod+x exec --no-startup-id ulauncher
-
+exec --no-startup-id ulauncher
 # 6. Change focus
 # bindsym $mod+j focus left
 # bindsym $mod+k focus down

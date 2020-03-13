@@ -56,11 +56,12 @@ merged=false
 # name="honza/vim-snippets"
 # merged=false
 
-# [[custom_plugins]]
-# name="SirVer/ultisnips"
-# merged=false
 #
 [[custom_plugins]]
 name="junegunn/vim-peekaboo"
 merged=false
+
+# [[custom_plugins]]
+# name="jceb/vim-orgmode"
+# merged=false
 
