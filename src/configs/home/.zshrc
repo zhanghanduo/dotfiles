@@ -41,3 +41,4 @@ source $HOME/.aliases
 source $HOME/.env
 source $HOME/.functions
 # [ -f ".zshrc.local"] && source ".zshrc.local"
+

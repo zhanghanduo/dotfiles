@@ -7,6 +7,8 @@
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias lc="colorls -lA --sd"
+alias l="lsd -l"
+alias lt="lsd --tree"
 alias la="lsd -laF"
 alias vi="vim"
 alias cl="sh ~/softwares/clion-2019.2.2/bin/clion.sh"

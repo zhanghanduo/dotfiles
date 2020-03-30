@@ -2,10 +2,11 @@
 
 ## Created By Aditya Shakya
 
-MENU="$(rofi -sep "|" -dmenu -i -p 'System' -width 12 -hide-scrollbar -line-padding 4 -padding 20 -lines 4 <<< " Lock| Logout| Reboot| Shutdown")"
+MENU="$(rofi -sep "|" -dmenu -i -p 'System' -width 12 -hide-scrollbar -line-padding 4 -padding 20 -lines 5 <<< " Lock| Logout| Suspend|  Reboot| Shutdown")"
             case "$MENU" in
-                *Lock) i3lock-fancy ;;
-                *Logout) openbox --exit;;
+                *Lock) betterlockscreen --off 15 -l dimblur ;;
+                *Logout) i3-msg exit;;
+		*Suspend) i3exit suspend;;
                 *Reboot) systemctl reboot ;;
                 *Shutdown) systemctl -i poweroff
             esac
