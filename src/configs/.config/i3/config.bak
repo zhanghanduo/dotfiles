@@ -19,7 +19,7 @@ font pango: SauceCodePro Nerd Font SemiBold 11
 floating_modifier $mod
 
 set $firstMonitor DVI-I-0
-# set $secondMonitor DP-1
+set $secondMonitor DP-1
 
 # 3. Workspaces
 
@@ -71,9 +71,9 @@ workspace $ws3 output $firstMonitor
 workspace $ws4 output $firstMonitor
 workspace $ws5 output $firstMonitor
 workspace $ws6 output $firstMonitor
-workspace $ws7 output $firstMonitor
-workspace $ws8 output $firstMonitor
-workspace $ws9 output $firstMonitor
+workspace $ws7 output $secondMonitor
+workspace $ws8 output $secondMonitor
+workspace $ws9 output $secondMonitor
 workspace $ws10 output $firstMonitor
 
 # switch to workspace
@@ -310,7 +310,7 @@ exec --no-startup-id redshift -O 5300
 exec --no-startup-id clipit
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
-exec_always --no-startup-id $HOME/.config/polybar/launch_single.sh
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 # Theme colors
 client.focused #4C7899 #285577 #bfbfbf #39402e #39402e
@@ -396,7 +396,7 @@ for_window [class="^Steam$" title="^Steam Guard - Computer Authorization Require
 for_window [title="^Steam Keyboard$"] floating enable
 new_window none
 # exec_always xrandr --output DVI-I-1 --off --output DVI-I-0 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output DP-1 --mode 1920x1080 --pos 1920x0 --rotate left --output DP-0 --off
-exec_always xrandr --output DVI-I-1 --off --output DVI-I-0 --primary --mode 1920x1080 --pos 1080x400 --rotate normal --output DP-1 --off --output DP-0 --off
+exec_always xrandr --output DVI-I-1 --off --output DVI-I-0 --primary --mode 1920x1080 --pos 1080x400 --rotate normal --output DP-1 --mode 1920x1080 --pos 0x0 --rotate left --output DP-0 --off
 # exec_always xrandr --output DVI-I-1 --off --output DVI-I-0 --primary --auto --output DP-1 --rotate left --panning 1920x1080+1080+0 --left-of DVI-I-1 --output DP-0 --off
 
 exec --no-startup-id dropbox start

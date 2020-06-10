@@ -78,7 +78,7 @@
   # Set this to `None` to use the default theme variant.
   #gtk_theme_variant: None
 
-scrolling:
+# scrolling:
   # Maximum number of lines in the scrollback buffer.
   # Specifying '0' will disable scrolling.
   #history: 10000
@@ -88,7 +88,7 @@ scrolling:
   #multiplier: 3
 
   # Scroll to the bottom when new text is written to the terminal.
-  auto_scroll: true
+  # auto_scroll: true
 
 # Spaces per Tab (changes require restart)
 #
