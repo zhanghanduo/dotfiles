@@ -2,7 +2,7 @@
 
 count=0
 disconnected=""
-disconnected1="Nah!"
+disconnected1="Nah"
 wireless_connected=""
 ethernet_connected=""
 
@@ -21,3 +21,4 @@ while true; do
         echo "$disconnected" "$disconnected1"; sleep 0.5
     fi
 done
+

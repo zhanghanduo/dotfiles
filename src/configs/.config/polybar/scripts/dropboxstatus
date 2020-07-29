@@ -8,9 +8,9 @@ case "$1" in
 			notify-send "Dropbox isn't running!"
 		fi
 		;;
-	*)			
+	*)
 		if pgrep -x "dropbox" > /dev/null; then
-			echo "DBX"
+			echo "Dropbox"
 		else
 			echo "---"
 		fi

@@ -31,3 +31,6 @@ export GOPATH=$HOME/go
 export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
 
 # [-f ".profile.local"] && source ".profile.local"
+
+export PATH="$HOME/.poetry/bin:$PATH"
+eval $(/home/handuo/.linuxbrew/bin/brew shellenv)

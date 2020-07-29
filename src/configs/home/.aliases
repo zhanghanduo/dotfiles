@@ -6,10 +6,12 @@
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias ~="cd ~"
-alias ...="cd ../.."
-alias ....="cd ../../.."
-alias .....="cd ../../../.."
+# alias ~="cd ~"
+# alias ...="cd ../.."
+# alias ....="cd ../../.."
+# alias .....="cd ../../../.."
+alias ls='ls --color=auto'
+alias ll='ls -la'
 alias lc="colorls -lA --sd"
 alias l="lsd -l"
 alias lt="lsd --tree"
@@ -18,6 +20,7 @@ alias vi="vim"
 alias cl="sh ~/softwares/clion-2019.2.2/bin/clion.sh"
 alias pycharm="sh -i -c ~/softwares/pycharm-2020.1.1/bin/pycharm.sh"
 alias gpu="watch -n1 nvidia-smi"
+alias lg="lazygit"
 alias tgz='tar -zxvf'
 alias ra='ranger'
 alias cat='bat'

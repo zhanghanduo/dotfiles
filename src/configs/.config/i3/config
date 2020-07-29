@@ -19,7 +19,7 @@ font pango: SauceCodePro Nerd Font SemiBold 11
 floating_modifier $mod
 
 set $firstMonitor DVI-I-0
-# set $secondMonitor DP-1
+set $secondMonitor DP-1
 
 # 3. Workspaces
 
@@ -71,10 +71,10 @@ workspace $ws3 output $firstMonitor
 workspace $ws4 output $firstMonitor
 workspace $ws5 output $firstMonitor
 workspace $ws6 output $firstMonitor
-workspace $ws7 output $firstMonitor
-workspace $ws8 output $firstMonitor
-workspace $ws9 output $firstMonitor
-workspace $ws10 output $firstMonitor
+workspace $ws7 output $secondMonitor
+workspace $ws8 output $secondMonitor
+workspace $ws9 output $secondMonitor
+workspace $ws10 output $secondMonitor
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -121,6 +121,7 @@ exec_always --no-startup-id "killall -q dunst; dunst -config ~/.config/i3/notif"
 
 bindsym $mod+Return exec gnome-terminal
 bindsym $mod+t exec alacritty
+# bindsym Control+space exec guake-toggle
 exec_always --no-startup-id guake
 for_window [instance="guake"] floating enable
 
@@ -257,8 +258,9 @@ bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
-# bindsym $mod+l exec i3lock -c 000000
+# bindsym $mod+l exec i3lock
 bindsym $mod+l exec betterlockscreen --off 15 -l dimblur
+# binsym $mod+l exec "i3lock-fancy -d -- maim"
 
 # Set shut down, restart and locking features
 bindsym $mod+m mode "$mode_system"
@@ -302,7 +304,7 @@ mode "resize" {
 }
 
 # Autostart applications
-exec --no-startup-id nitrogen --restore; sleep 1; compton -b
+exec --no-startup-id nitrogen --restore; sleep 1; picom -b
 exec --no-startup-id nm-applet
 exec --no-startup-id redshift -O 5300
 # exec --no-startup-id xfce4-power-manager
@@ -310,7 +312,7 @@ exec --no-startup-id redshift -O 5300
 exec --no-startup-id clipit
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
-exec_always --no-startup-id $HOME/.config/polybar/launch_single.sh
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 # Theme colors
 client.focused #4C7899 #285577 #bfbfbf #39402e #39402e
@@ -395,8 +397,8 @@ for_window [class="^Steam$" title="^Screenshot Uploader$"] floating enable
 for_window [class="^Steam$" title="^Steam Guard - Computer Authorization Required$"] floating enable
 for_window [title="^Steam Keyboard$"] floating enable
 new_window none
-# exec_always xrandr --output DVI-I-1 --off --output DVI-I-0 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output DP-1 --mode 1920x1080 --pos 1920x0 --rotate left --output DP-0 --off
-exec_always xrandr --output DVI-I-1 --off --output DVI-I-0 --primary --mode 1920x1080 --pos 1080x400 --rotate normal --output DP-1 --off --output DP-0 --off
+# exec_always xrandr --output DVI-I-1 --off --output DVI-I-0 --primary --mode 1920x1080 --pos 1080x464 --rotate normal --output DP-1 --mode 1920x1080 --pos 0x0 --rotate left --output DP-0 --off
+exec_always xrandr --output DVI-I-1 --off --output DP-1-3 --off --output HDMI-1-1 --off --output DP-1-2 --off --output DP-1-1 --off --output DVI-I-0 --primary --mode 1920x1080 --pos 1080x464 --rotate normal --output DP-1 --mode 1920x1080 --pos 0x0 --rotate left --output DP-0 --off
 # exec_always xrandr --output DVI-I-1 --off --output DVI-I-0 --primary --auto --output DP-1 --rotate left --panning 1920x1080+1080+0 --left-of DVI-I-1 --output DP-0 --off
 
 exec --no-startup-id dropbox start
