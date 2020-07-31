@@ -182,13 +182,17 @@ bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
-bindsym $mod+Shift+space floating toggle
+bindsym $mod+o floating toggle
 
 # change focus between tiling / floating windows
 bindsym $mod+space focus mode_toggle
 
 # toggle sticky
-bindsym $mod+Shift+s sticky toggle
+# bindsym $mod+Shift+s sticky toggle
+bindsym $mod+Shift+s exec ~/.config/i3/i3-display-swap.sh
+
+# toggle sticky
+# bindsym $mod+Shift+s sticky toggle
 
 # focus the parent container
 bindsym $mod+a focus parent
@@ -310,8 +314,8 @@ exec --no-startup-id redshift -O 5300
 # exec --no-startup-id xfce4-power-manager
 # exec --no-startup-id pamac-tray
 exec --no-startup-id clipit
-exec_always --no-startup-id ff-theme-util
-exec_always --no-startup-id fix_xcursor
+# exec_always --no-startup-id ff-theme-util
+# exec_always --no-startup-id fix_xcursor
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 # Theme colors
