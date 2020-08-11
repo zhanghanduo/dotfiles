@@ -5,11 +5,11 @@ HISTDB_TABULATE_CMD=(sed -e $'s/\x1f/\t/g')
 source ~/.zsh_plugins.sh
 # antibody bundle robbyrussell/oh-my-zsh path:lib
 export ZSH=$(antibody path robbyrussell/oh-my-zsh)
-# antibody bundle < ~/bundles.txt
 
 source $HOME/.aliases
 source $HOME/.env
 source $HOME/.functions
+# source $HOME/.zsh-theme
 # [ -f ".zshrc.local"] && source ".zshrc.local"
 
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"

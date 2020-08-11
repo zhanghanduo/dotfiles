@@ -5,11 +5,7 @@
 #
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-# alias ~="cd ~"
-# alias ...="cd ../.."
-# alias ....="cd ../../.."
-# alias .....="cd ../../../.."
+alias s='swallow'
 alias ls='ls --color=auto'
 alias ll='ls -la'
 alias lc="colorls -lA --sd"
