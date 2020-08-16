@@ -29,14 +29,8 @@ fpath+=( /home/handuo/.cache/antibody/https-COLON--SLASH--SLASH-github.com-SLASH
 
 source /home/handuo/.cache/antibody/https-COLON--SLASH--SLASH-github.com-SLASH-robbyrussell-SLASH-oh-my-zsh/plugins/sudo/sudo.plugin.zsh
 fpath+=( /home/handuo/.cache/antibody/https-COLON--SLASH--SLASH-github.com-SLASH-robbyrussell-SLASH-oh-my-zsh/plugins/sudo )
-source /home/handuo/.cache/antibody/https-COLON--SLASH--SLASH-github.com-SLASH-robbyrussell-SLASH-oh-my-zsh/plugins/z/z.plugin.zsh
-fpath+=( /home/handuo/.cache/antibody/https-COLON--SLASH--SLASH-github.com-SLASH-robbyrussell-SLASH-oh-my-zsh/plugins/z )
 source /home/handuo/.cache/antibody/https-COLON--SLASH--SLASH-github.com-SLASH-leophys-SLASH-zsh-plugin-fzf-finder/fzf-finder.plugin.zsh
 fpath+=( /home/handuo/.cache/antibody/https-COLON--SLASH--SLASH-github.com-SLASH-leophys-SLASH-zsh-plugin-fzf-finder )
-source /home/handuo/.cache/antibody/https-COLON--SLASH--SLASH-github.com-SLASH-andrewferrier-SLASH-fzf-z/fzf-z.plugin.zsh
-fpath+=( /home/handuo/.cache/antibody/https-COLON--SLASH--SLASH-github.com-SLASH-andrewferrier-SLASH-fzf-z )
-source /home/handuo/.cache/antibody/https-COLON--SLASH--SLASH-github.com-SLASH-supercrabtree-SLASH-k/k.plugin.zsh
-fpath+=( /home/handuo/.cache/antibody/https-COLON--SLASH--SLASH-github.com-SLASH-supercrabtree-SLASH-k )
 source /home/handuo/.cache/antibody/https-COLON--SLASH--SLASH-github.com-SLASH-zsh-users-SLASH-zsh-completions/zsh-completions.plugin.zsh
 fpath+=( /home/handuo/.cache/antibody/https-COLON--SLASH--SLASH-github.com-SLASH-zsh-users-SLASH-zsh-completions )
 source /home/handuo/.cache/antibody/https-COLON--SLASH--SLASH-github.com-SLASH-zsh-users-SLASH-zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
@@ -44,7 +38,6 @@ fpath+=( /home/handuo/.cache/antibody/https-COLON--SLASH--SLASH-github.com-SLASH
 source /home/handuo/.cache/antibody/https-COLON--SLASH--SLASH-github.com-SLASH-leophys-SLASH-zsh-plugin-fzf-finder/fzf-finder.plugin.zsh
 fpath+=( /home/handuo/.cache/antibody/https-COLON--SLASH--SLASH-github.com-SLASH-leophys-SLASH-zsh-plugin-fzf-finder )
 source /home/handuo/.cache/antibody/https-COLON--SLASH--SLASH-github.com-SLASH-larkery-SLASH-zsh-histdb/zsh-histdb.plugin.zsh
-source  /home/handuo/.cache/antibody/https-COLON--SLASH--SLASH-github.com-SLASH-larkery-SLASH-zsh-histdb/sqlite-history.zsh
 fpath+=( /home/handuo/.cache/antibody/https-COLON--SLASH--SLASH-github.com-SLASH-larkery-SLASH-zsh-histdb )
 source /home/handuo/.cache/antibody/https-COLON--SLASH--SLASH-github.com-SLASH-romkatv-SLASH-powerlevel10k/powerlevel10k.zsh-theme
 source /home/handuo/.cache/antibody/https-COLON--SLASH--SLASH-github.com-SLASH-romkatv-SLASH-powerlevel10k/powerlevel9k.zsh-theme

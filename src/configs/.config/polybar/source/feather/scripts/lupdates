@@ -1,3 +1,4 @@
 #!/bin/bash
 
-termite -e "sudo pacman -Syu"
+# termite -e "sudo pacman -Syu"
+gnome-terminal -e "sudo apt update"

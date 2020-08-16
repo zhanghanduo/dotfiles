@@ -237,11 +237,11 @@ exec_always xrandr --output DVI-I-1 --off --output DP-1-3 --off --output HDMI-1-
 exec --no-startup-id xrdb ~/.Xresources
 exec --no-startup-id nitrogen --restore
 # (3) Compositor
-exec --no-starup-id picom -b --experimental-backends
+exec_always --no-starup-id picom -b --experimental-backends
 # (4) Network manger
 exec --no-startup-id nm-applet
 # (5) Screen Color Adjustment
-exec --no-startup-id redshift -O 5300
+exec --no-startup-id redshift -O 5100
 # (6) xfce power manager
 # exec --no-startup-id xfce4-power-manager
 # (7) GTK+ Clipboard manger
@@ -259,7 +259,7 @@ exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 # (12) Notification
 exec_always --no-startup-id "killall -q dunst; dunst"
 # (13) Fcitx input method
-exec --no-startup-id fcitx -d
+exec_always --no-startup-id fcitx -d
 # (14) Other applications
 exec_always --no-startup-id guake
 exec --no-startup-id dropbox start

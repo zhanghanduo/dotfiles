@@ -1,20 +1,24 @@
 #!/usr/bin/env bash
 
 count=0
-disconnected="Disconnected"
-wireless_connected="Connected"
-ethernet_connected="Connected"
+disconnected=""
+disconnected1="Nah"
+wireless_connected=""
+ethernet_connected=""
 
+SSID_NAME=$(iwgetid -r)
 ID="$(ip link | awk '/state UP/ {print $2}')"
+route_id="$(ip route | grep -Po '(?<=via )(\d{1,3}.){4}')"
 
 while true; do
-    if (ping -c 1 archlinux.org || ping -c 1 google.com || ping -c 1 bitbucket.org || ping -c 1 github.com || ping -c 1 sourceforge.net) &>/dev/null; then
+  if (ping -c 1 "$route_id")  &>/dev/null; then
         if [[ $ID == e* ]]; then
             echo "$ethernet_connected" ; sleep 25
         else
-            echo "$wireless_connected" ; sleep 25
+            echo "$wireless_connected" "${SSID_NAME}"; sleep 5
         fi
     else
-        echo "$disconnected" ; sleep 0.5
+        echo "$disconnected" "$disconnected1"; sleep 0.5
     fi
 done
+

@@ -1,5 +1,5 @@
 #!/bin/bash
 
-## Created By Aditya Shakya
+## Created By Zhang Handuo 2018.7.16 Gruvbox theme
 
-rofi -modi window -show window -hide-scrollbar -padding 20 -line-padding 4 -width 40 -lines 6
+rofi -modi window -show window -width 60 -location 0 -sidebar-mode -opacity "82" -hide-scrollbar -padding 20 -line-padding 4 -width 40 -bw 0 -bc "#1f222d" -bg "#1f222d" -fg "$text-color" -hlbg "#1f222d" -hlfg "#9575cd" -font "SauceCodePro Nerd Font 17" -theme themes/gruvbox/gruvbox-dark-soft
