@@ -11,10 +11,9 @@
     # set spacevim theme. by default colorscheme layer is not loaded,
     # if you want to use more colorscheme, please load the colorscheme
     # layer
-    colorscheme = "gruvbox"
+    # colorscheme = "gruvbox"
+    colorscheme = "forest-night"
     colorscheme_bg = "dark"
-    # colorscheme = "material"
-    # colorscheme_bg = "dark"
     # Disable guicolors in basic mode, many terminal do not support 24bit
     # true colors
     enable_guicolors = true
@@ -22,28 +21,44 @@
     # install nerd fonts
     statusline_separator = "arrow"
     statusline_inactive_separator = "arrow"
-    guifont = 'SauceCodePro Nerd Font Mono:h12:cANSI:qDRAFT'
     buffer_index_type = 4
     enable_tabline_filetype_icon = true
     enable_statusline_mode = false
-    bootstrap_after = "myconfig#after"
+    autocomplete_method = "coc"
+    # bootstrap_after = "myconfig#after"
     enable_os_fileformat_icon = true
     statusline_unicode_symbols = true
+    # guifont = 'SauceCodePro Nerd Font Mono:h12:cANSI:qDRAFT'
+
 # Enable autocomplete layer
 [[layers]]
 name = 'autocomplete'
-auto-completion-return-key-behavior = "complete"
-auto-completion-tab-key-behavior = "smart"
+auto_completion_return_key_behavior = "complete"
+auto_completion_tab_key_behavior = "smart"
+
+[[layers]]
+  name = 'lsp'
+  filetypes = [
+    'python'
+    'sh'
+  ]
+  [layers.override_cmd]
+    python = ['pyls']
+    sh = ['bash-language-server', 'start']
 
 [[layers]]
 name = 'shell'
 default_position = 'top'
 default_height = 30
 
+[[custom_plugins]]
+  repo = "sainnhe/forest-night"
+  merged = 0
+
 [[layers]]
-name="lang#latex"
-name="lang#python"
-name="lang#c"
+  name="lang#latex"
+# name="lang#python"
+  name="lang#c"
 
 [[layers]]
 name = "fzf"
@@ -52,16 +67,10 @@ name = "fzf"
 name="xuhdev/vim-latex-live-preview"
 merged=false
 
-# [[custom_plugins]]
-# name="honza/vim-snippets"
-# merged=false
-
-#
 [[custom_plugins]]
 name="junegunn/vim-peekaboo"
 merged=false
 
-# [[custom_plugins]]
-# name="jceb/vim-orgmode"
-# merged=false
-
+[[custom_plugins]]
+name="kdheepak/lazygit.nvim"
+merged=false

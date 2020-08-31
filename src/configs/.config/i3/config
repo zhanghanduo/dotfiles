@@ -237,7 +237,7 @@ exec_always xrandr --output DVI-I-1 --off --output DP-1-3 --off --output HDMI-1-
 exec --no-startup-id xrdb ~/.Xresources
 exec --no-startup-id nitrogen --restore
 # (3) Compositor
-exec_always --no-starup-id picom -b --experimental-backends
+exec --no-starup-id picom -b --experimental-backends
 # (4) Network manger
 exec --no-startup-id nm-applet
 # (5) Screen Color Adjustment
@@ -259,7 +259,7 @@ exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 # (12) Notification
 exec_always --no-startup-id "killall -q dunst; dunst"
 # (13) Fcitx input method
-exec_always --no-startup-id fcitx -d
+exec --no-startup-id fcitx -d
 # (14) Other applications
 exec_always --no-startup-id guake
 exec --no-startup-id dropbox start
@@ -345,6 +345,11 @@ for_window [class="^Steam$" title=".* CD key"] floating enable
 for_window [class="^Steam$" title="^Steam - Self Updater$"] floating enable
 for_window [class="^Steam$" title="^Screenshot Uploader$"] floating enable
 for_window [class="^Steam$" title="^Steam Guard - Computer Authorization Required$"] floating enable
+for_window [class="Nvidia-settings"] floating enable
+for_window [class="Arandr"] floating enable
+for_window [class="Nautilus"] floating enable
+for_window [class="Nitrogen"] floating enable
+for_window [class="Gnome-system-monitor"] floating enable
 for_window [title="^Steam Keyboard$"] floating enable
 new_window none
 

@@ -10,6 +10,7 @@
 export QT_IM_MODULE=fcitx
 export XMODIFIERS="@im=fcitx"
 export GTK_IM_MODULE=fcitx
+export defaultIMModule=fcitx
 # if running bash
 if [ -n "$BASH_VERSION" ]; then
     # include .bashrc if it exists
