@@ -6,6 +6,7 @@
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 alias s='swallow'
+alias emoji="fontawesome-menu -f ~/projects/configs/rofi-fontawesome/icon-list.txt -o '-i -columns 6 -width 100 -lines 20 -bw 2 -yoffset -2 -location 1 ' "
 alias ls='ls --color=auto'
 alias ll='ls -la'
 alias lc="colorls -lA --sd"

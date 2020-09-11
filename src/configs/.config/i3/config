@@ -267,13 +267,14 @@ exec --no-startup-id ulauncher
 exec --no-startup-id flameshot
 
 # 5.2 Common tools
-bindsym $mod+Return exec gnome-terminal
+bindsym Ctrl+$alt+t exec gnome-terminal
+bindsym $mod+Return exec kitty
 bindsym $mod+t exec alacritty
 bindsym $alt+b exec alacritty -e "bpytop"
 # start program launcher
 # bindsym $alt+Tab exec --no-startup-id rofi -show window -width 60 -location 0 -sidebar-mode -opacity "82" -bw 0 -bc "$base01" -bg "$base01" -fg "$text-color" -hlbg "$base01" -hlfg "#9575cd" -font "SauceCodePro Nerd Font 17" -theme themes/gruvbox/gruvbox-dark-soft
 # bindsym $mod+d exec --no-startup-id rofi -modi "run#drun" -show run -lines 8 -padding 18 -width 60 -location 0 -sidebar-mode -columns 3 -opacity "82" -bw 0 -bc "$base01" -bg "$base01" -fg "$text-color" -hlbg "$base01" -hlfg "#9575cd" -show-icons -drun-icon-theme "Papirus" -font "System San Francisco Display 18" -theme themes/gruvbox/gruvbox-dark-soft
-# bindsym $mod+i exec --no-startup-id fontawesome-menu -f '~/projects/configs/rofi-fontawesome/fa5-icon-list.txt' -o '-i -columns 6 -width 100 -lines 20 -bw 2 -yoffset -2 -location 1  -theme themes/gruvbox/gruvbox-dark-soft'
+bindsym $alt+e exec fontawesome-menu -f '~/projects/configs/rofi-fontawesome/icon-list.txt' -o '-i -columns 6 -width 100 -lines 20 -bw 2 -yoffset -2 -location 1 '
 # start rofi (dmenu mode)
 bindsym $mod+d exec rofi -theme themes/app-launcher -show drun
 # start rofi (window mode)
