@@ -26,6 +26,7 @@
     enable_statusline_mode = false
     # autocomplete_method = "coc"
     # bootstrap_after = "transparent_background#after"
+    bootstrap_after = "program#after"
     enable_os_fileformat_icon = true
     statusline_unicode_symbols = true
     # guifont = 'SauceCodePro Nerd Font Mono:h12:cANSI:qDRAFT'
