@@ -259,7 +259,7 @@ exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 # (12) Notification
 exec_always --no-startup-id "killall -q dunst; dunst"
 # (13) Fcitx input method
-exec --no-startup-id "fcitx -d"
+exec --no-startup-id "fcitx -d -r"
 # (14) Other applications
 exec_always --no-startup-id guake
 exec --no-startup-id dropbox start
@@ -308,31 +308,26 @@ bindsym $mod+c exec --no-startup-id nautilus
 for_window [instance="guake"] floating enable
 for_window [class="jetbrains-.*" title="win0"] floating enable border none
 for_window [title="alsamixer"] floating enable border pixel 1
-for_window [class="Calamares"] floating enable border normal
-for_window [class="Clipgrab"] floating enable
 for_window [title="File Transfer*"] floating enable
 for_window [class="Galculator"] floating enable border pixel 1
 for_window [class="GParted"] floating enable border normal
 for_window [title="i3_help"] floating enable sticky enable border normal
 for_window [class="Lightdm-gtk-greeter-settings"] floating enable
 for_window [class="Lxappearance"] floating enable sticky enable border normal
-for_window [class="Manjaro Settings Manager"] floating enable border normal
 for_window [title="MuseScore: Play Panel"] floating enable
 for_window [class="Nitrogen"] floating enable sticky enable border normal
-for_window [class="Oblogout"] fullscreen enable
-for_window [class="octopi"] floating enable
+# for_window [class="Oblogout"] fullscreen enable
 for_window [class="Pavucontrol"] floating enable
 for_window [class="qt5ct"] floating enable sticky enable border normal
 for_window [class="Qtconfig-qt4"] floating enable sticky enable border normal
 for_window [class="(?i)System-config-printer.py"] floating enable border normal
 for_window [class="Skype"] floating enable border normal
-# for_window [class="Thus"] floating enable border normal
 # for_window [class="(?i)virtualbox"] floating enable border normal
 for_window [title="Obstacle Mask"] move to workspace $ws6 floating enable border normal
 for_window [title="Detection and Tracking"] move to workspace $ws6 floating enable border normal
 for_window [title="Slope Map"] move to workspace $ws6 floating enable border normal
 for_window [title="Disparity"] move to workspace $ws6 floating enable border normal
-for_window [title="YOLO V3"] move to workspace $ws6 floating enable border normal
+for_window [title="YOLO$"] move to workspace $ws6 floating enable border normal
 for_window [title="^OpenCV"] move to workspace $ws6 floating enable border normal
 for_window [title="^opencv"] move to workspace $ws6 floating enable border normal
 for_window [window_role="pop-up"] floating enable
@@ -348,8 +343,7 @@ for_window [class="^Steam$" title="^Screenshot Uploader$"] floating enable
 for_window [class="^Steam$" title="^Steam Guard - Computer Authorization Required$"] floating enable
 for_window [class="Nvidia-settings"] floating enable
 for_window [class="Arandr"] floating enable
-for_window [class="Nautilus"] floating enable
-for_window [class="Nitrogen"] floating enable
+for_window [class="Nautilus"] floating enable sticky enable
 for_window [class="Gnome-system-monitor"] floating enable
 for_window [title="^Steam Keyboard$"] floating enable
 new_window none
@@ -357,7 +351,7 @@ new_window none
 assign [class="Spotify"] $ws7
 assign [class="Firefox"] $ws2
 # assign [class="Google-chrome"] $ws2
-assign [class="Code"] $ws4
+# assign [class="Code"] $ws4
 assign [class="rviz"] $ws6
 
 bindsym $mod+l exec betterlockscreen --off 40 -l dimblur

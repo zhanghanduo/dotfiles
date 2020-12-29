@@ -102,9 +102,9 @@ URxvt.pointerBlank:         true
 !----------------
 
 !! Transparency (0-255):
-*.alpha: 210
+! *.alpha: 210
 !! Set a default font and font size as below:
-*.font: Iosevka-14;
+! *.font: SauceCodePro Nerd Font Mono:style=Regular:size=14
 
 !------------------------------
 !  Betterlooking fonts for MWM
