@@ -35,3 +35,4 @@ export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
 
 export PATH="$HOME/.poetry/bin:$PATH"
 eval $(/home/handuo/.linuxbrew/bin/brew shellenv)
+source "$HOME/.cargo/env"

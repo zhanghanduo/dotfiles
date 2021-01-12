@@ -265,6 +265,7 @@ exec_always --no-startup-id guake
 exec --no-startup-id dropbox start
 exec --no-startup-id ulauncher
 exec --no-startup-id flameshot
+exec_always --no-startup-id $HOME/.config/i3/rclone.sh
 
 # 5.2 Common tools
 bindsym Ctrl+$alt+t exec gnome-terminal
@@ -274,9 +275,10 @@ bindsym $alt+b exec alacritty -e "bpytop"
 # start program launcher
 # bindsym $alt+Tab exec --no-startup-id rofi -show window -width 60 -location 0 -sidebar-mode -opacity "82" -bw 0 -bc "$base01" -bg "$base01" -fg "$text-color" -hlbg "$base01" -hlfg "#9575cd" -font "SauceCodePro Nerd Font 17" -theme themes/gruvbox/gruvbox-dark-soft
 # bindsym $mod+d exec --no-startup-id rofi -modi "run#drun" -show run -lines 8 -padding 18 -width 60 -location 0 -sidebar-mode -columns 3 -opacity "82" -bw 0 -bc "$base01" -bg "$base01" -fg "$text-color" -hlbg "$base01" -hlfg "#9575cd" -show-icons -drun-icon-theme "Papirus" -font "System San Francisco Display 18" -theme themes/gruvbox/gruvbox-dark-soft
-bindsym $alt+e exec fontawesome-menu -f '~/projects/configs/rofi-fontawesome/icon-list.txt' -o '-i -columns 6 -width 100 -lines 20 -bw 2 -yoffset -2 -location 1 '
+bindsym $alt+e exec fontawesome-menu -f '~/projects/configs/rofi-fontawesome/icon-list.txt' -o '-i -columns 6 -width 130 -lines 20 -bw 2 -yoffset -2 -location 1 '
 # start rofi (dmenu mode)
-bindsym $mod+d exec rofi -theme themes/app-launcher -show drun
+# bindsym $mod+d exec rofi -theme themes/app-launcher -show drun
+bindsym $mod+d exec --no-startup-id rofi -theme themes/gruvbox/gruvbox-dark-soft -show drun -lines 10 -padding 18 -width 60 -location 0 -sidebar-mode -columns 3 -opacity "82" -bw 0 -bc "$base01" -bg "$base01" -fg "$text-color" -hlbg "$base01" -hlfg "#9575cd" -font "Source Code Pro 15"
 # start rofi (window mode)
 bindsym $mod+Tab exec rofi -theme themes/app-launcher -show window
 # start system log/power options
@@ -309,7 +311,7 @@ for_window [instance="guake"] floating enable
 for_window [class="jetbrains-.*" title="win0"] floating enable border none
 for_window [title="alsamixer"] floating enable border pixel 1
 for_window [title="File Transfer*"] floating enable
-for_window [class="Galculator"] floating enable border pixel 1
+for_window [class="Gnome-calculator"] floating enable border pixel 1
 for_window [class="GParted"] floating enable border normal
 for_window [title="i3_help"] floating enable sticky enable border normal
 for_window [class="Lightdm-gtk-greeter-settings"] floating enable
@@ -355,7 +357,7 @@ assign [class="Firefox"] $ws2
 assign [class="rviz"] $ws6
 
 bindsym $mod+l exec betterlockscreen --off 40 -l dimblur
-# binsym $mod+l exec "i3lock-fancy -d -- maim"
+bindsym $alt+l exec "i3lock-fancy -p -- scrot"
 
 # Theme colors
 client.focused #4C7899 #285577 #bfbfbf #39402e #39402e

@@ -1,0 +1,37 @@
+{
+    "com.github.glovecc.ulauncher-github-search": {
+        "id": "com.github.glovecc.ulauncher-github-search",
+        "url": "https://github.com/Glovecc/ulauncher-github-search",
+        "updated_at": "2020-02-27T20:20:26.560011",
+        "last_commit": "14b102191ce1a9ca4c2e67fbcc6b1269333df50e",
+        "last_commit_time": "2020-02-12T09:49:45"
+    },
+    "com.github.pwnyprod.ulauncher-ipcopy": {
+        "id": "com.github.pwnyprod.ulauncher-ipcopy",
+        "url": "https://github.com/pwnyprod/ulauncher-ipcopy",
+        "updated_at": "2020-02-27T20:20:44.609529",
+        "last_commit": "cb9dccda390d2c4d1299148491c65c177066ad14",
+        "last_commit_time": "2020-01-19T13:42:10"
+    },
+    "com.github.dcervenkov.ulauncher-z-search": {
+        "id": "com.github.dcervenkov.ulauncher-z-search",
+        "url": "https://github.com/dcervenkov/ulauncher-z-search",
+        "updated_at": "2020-07-31T10:50:47.672904",
+        "last_commit": "a9275f6e538ea108588190fde25b605dddc81d81",
+        "last_commit_time": "2020-07-05T10:41:13"
+    },
+    "com.github.episode6.ulauncher-system-management-direct": {
+        "id": "com.github.episode6.ulauncher-system-management-direct",
+        "url": "https://github.com/episode6/ulauncher-system-management-direct",
+        "updated_at": "2020-07-31T10:11:51.685607",
+        "last_commit": "c6c0febff9eae884e4a8bc97d057480436fb5c9b",
+        "last_commit_time": "2020-07-22T18:41:36"
+    },
+    "com.github.jetbug123.ulauncher-ssh": {
+        "id": "com.github.jetbug123.ulauncher-ssh",
+        "url": "https://github.com/jetbug123/ulauncher-ssh",
+        "updated_at": "2020-07-31T10:50:32.017836",
+        "last_commit": "dae2cc875b90ae5d625cf177127626e1c8b9719f",
+        "last_commit_time": "2020-05-09T21:20:33"
+    }
+}
